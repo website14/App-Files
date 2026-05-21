@@ -1,0 +1,249 @@
+:root {
+  --bg-colour: rgb(32, 32, 32);
+  --header-bg-color: white;
+  --txt-color: white;
+  --trenn1-color: white;
+  --btn1-color: white;
+  --btn1-color-hover: rgb(128, 128, 128);
+  --txt3-color: rgb(128, 128, 128);
+}
+
+.light {
+  --bg-colour: rgb(255, 255, 255);
+  --header-bg-color: rgb(204, 204, 204);
+  --txt-color: rgb(0, 0, 0);
+  --trenn1-color: rgb(0, 0, 0);
+  --btn1-color: rgb(0, 0, 0);
+  --btn1-color-hover: rgb(128, 128, 128);
+  --txt3-color: rgb(58, 58, 58);
+}
+
+html {
+  background-color: var(--bg-colour);
+}
+
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  font-family: Inter, sans-serif;
+}
+
+div.header {
+  width: 100;
+  background-color: var(--header-bg-color);
+  top: 0;
+  position: sticky;
+  animation-name: OU;
+  animation-duration: 1s;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+p.headerfont {
+  font-size: 2.5vh;
+  font-weight: 3500;
+  animation-name: OU;
+  animation-duration: 1s;
+}
+
+h1.txt1 {
+  color: var(--txt-color);
+  font-weight: 400;
+  font-size: 4vh;
+  animation-name: main;
+  animation-duration: 1s;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes main {
+  0% {
+    opacity: 0;
+    transform: translateX(-10px);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes OU {
+  0% {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+hr.trenn1 {
+  width: 50%;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  background: repeating-linear-gradient(
+    to right,
+    var(--trenn1-color) 0px,
+    var(--trenn1-color) 5px,
+    transparent 5px,
+    transparent 10px
+  );
+  animation-name: main;
+  animation-duration: 1s;
+  border: none;
+  height: 0.125rem;
+}
+
+h1.txt2 {
+  color: var(--txt-color);
+  font-weight: 350;
+  font-size: 3.8vh;
+  animation-name: main;
+  animation-duration: 1s;
+  display: flex;
+  justify-content: center;
+}
+
+button.btn1 {
+  border: 1px var(--btn1-color) solid;
+  background: none;
+  border-radius: 100px;
+  color: var(--btn1-color);
+  width: fit-content;
+  padding-left: 50px;
+  padding-right: 50px;
+  justify-content: center;
+  display: flex;
+  align-self: center;
+  font-size: 2.4vh;
+  animation-name: main;
+  animation-duration: 1s;
+  cursor: pointer;
+  transition: 0.1s;
+  font-weight: 300;
+}
+
+button.btn1:hover {
+  color: 1px var(--btn1-color-hover) solid;
+  color: var(--btn1-color-hover);
+}
+
+@media (max-width: 400px) {
+  button.btn1 {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+hr.trenn2 {
+  width: 50%;
+  justify-content: center;
+  display: flex;
+  animation-name: main;
+  animation-duration: 1s;
+}
+
+p.txt3 {
+  color: var(--txt3-color);
+  font-weight: 200;
+  font-size: 2vh;
+  animation-name: main;
+  animation-duration: 1s;
+  display: flex;
+  justify-content: center;
+  font-style: italic;
+  animation-name: main;
+  animation-duration: 1s;
+}
+
+button.btn2 {
+  border: 1px var(--btn1-color) solid;
+  background: none;
+  border-radius: 100px;
+  color: var(--btn1-color);
+  width: fit-content;
+  padding-left: 50px;
+  padding-right: 50px;
+  justify-content: center;
+  display: flex;
+  align-self: center;
+  font-size: 2vh;
+  animation-name: main;
+  animation-duration: 1s;
+  cursor: pointer;
+  transition: 0.1s;
+  font-weight: 300;
+}
+
+.switch {
+  position: relative;
+  display: block;
+  width: 60px;
+  height: 34px;
+  margin: 0 auto;
+  animation-name: main;
+  animation-duration: 1s;
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+
+input:checked + .slider {
+  background-color: #2196f3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+* {
+  transition:
+    background-color 0.4s ease,
+    color 0.4s ease,
+    border-color 0.4s ease;
+}
