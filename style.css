@@ -247,3 +247,17 @@ input:checked + .slider:before {
     color 0.4s ease,
     border-color 0.4s ease;
 }
+
+p.txt4 {
+  color: var(--txt-color);
+  font-weight: 200;
+  font-size: 2.3vh;
+  animation-name: main;
+  animation-duration: 1s;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation-name: main;
+  animation-duration: 1s;
+}
