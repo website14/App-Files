@@ -1,5 +1,5 @@
 :root {
-  --bg-colour: rgb(19, 19, 19);
+  --bg-colour: rgb(31, 31, 31);
   --header-bg-color: white;
   --txt-color: white;
   --trenn1-color: white;
@@ -208,6 +208,25 @@ button.btn2 {
   font-weight: 300;
 }
 
+button.btn2:hover {
+  border: 1px var(--btn1-color-hover) solid;
+  background: none;
+  border-radius: 100px;
+  color: var(--btn1-color-hover);
+  width: fit-content;
+  padding-left: 50px;
+  padding-right: 50px;
+  justify-content: center;
+  display: flex;
+  align-self: center;
+  font-size: 2vh;
+  animation-name: main;
+  animation-duration: 1s;
+  cursor: pointer;
+  transition: 0.1s;
+  font-weight: 300;
+}
+
 .switch {
   position: relative;
   display: block;
@@ -301,8 +320,43 @@ p.txt5 {
   display: flex;
   justify-content: center;
   align-items: center;
-  animation-name: main;
-  animation-duration: 1s;
   white-space: pre-line;
   margin-top: 0;
+}
+
+.changelog {
+  display: none;
+  padding: 12px 0;
+  animation-name: OU;
+  animation-duration: 1s;
+}
+
+p.txt6 {
+  color: var(--txt-color);
+  font-weight: 200;
+  font-size: 2vh;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  white-space: pre-line;
+  margin-top: 0;
+}
+
+hr.trenn3 {
+  width: 50%;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  background: repeating-linear-gradient(
+    to right,
+    var(--trenn1-color) 0px,
+    var(--trenn1-color) 5px,
+    transparent 5px,
+    transparent 10px
+  );
+  animation-name: OU;
+  animation-duration: 1s;
+  border: none;
+  height: 0.125rem;
 }
