@@ -22,5 +22,6 @@ if (themeswitch) {
 
 function toggleChangelog() {
   const el = document.querySelector(".changelog");
-  el.style.display = el.style.display === "none" ? "block" : "none";
+  const isHidden = getComputedStyle(el).display === "none";
+  el.style.display = isHidden ? "block" : "none";
 }
